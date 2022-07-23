@@ -9,7 +9,8 @@ const {
 const { get, set } = require("../cache/redis");
 
 router.post("/create-user", async (req, res) => {
-    const student = await createStudent(req.body)
+    const student =  await createStudent(req.body)
+    return res.status(201).send(student);
 });
 
 router.get("/get-student/:id", async (req, res) => {

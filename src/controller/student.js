@@ -5,7 +5,6 @@ const createStudent = async (body) => {
     const student = new Student(body)
 
     try {
-        console.log(student)
         return await student.save()
     } catch(e) {
         console.log(e)
